@@ -40,7 +40,7 @@ class TestVFS(unittest.TestCase):
         self.assertEqual(result, 'Привет Мир')
 
     def test_echo_empty(self):
-        result = self.vfs.echo()  # Пустой вызов
+        result = self.vfs.echo()
         self.assertEqual(result, '')
 
     def test_cp_success(self):

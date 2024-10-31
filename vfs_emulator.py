@@ -51,7 +51,6 @@ class VFS:
         if src_path not in self.file_structure:
             raise FileNotFoundError(f"cp: no such file or directory: {source}")
 
-        # Обработка пути назначения
         if destination.endswith('/'):
             dest_path = os.path.join(destination, os.path.basename(source)).replace('\\', '/')
         else:
@@ -61,7 +60,6 @@ class VFS:
         if dest_dir not in self.file_structure and dest_dir != self.current_path:
             raise FileNotFoundError(f"cp: no such directory: {dest_dir}")
 
-        # Копируем файл, создавая новый путь
         self.file_structure[dest_path] = self.file_structure[src_path]
 
 
