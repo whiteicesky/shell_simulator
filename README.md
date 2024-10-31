@@ -44,3 +44,11 @@ tar. Эмулятор должен работать в режиме CLI.
 ![Screenshot 1](https://github.com/whiteicesky/shell_simulator/blob/main/Screenshot_1.png)
 
 ## Тесты
+1. В консоли сменить директорию на cli_emulator, если это еще не сделано
+3. Активировать файл tests_vfs.py
+   ```
+    python tests_vfs.py
+   ```
+Пример работы программы:
+
+![Screenshot 1](https://github.com/whiteicesky/shell_simulator/blob/main/Screenshot_1.png)
