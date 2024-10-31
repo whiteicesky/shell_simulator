@@ -51,4 +51,7 @@ tar. Эмулятор должен работать в режиме CLI.
    ```
 Пример работы программы:
 
-![Screenshot 1](https://github.com/whiteicesky/shell_simulator/blob/main/Screenshot_1.png)
+![Screenshot 2](https://github.com/whiteicesky/shell_simulator/blob/main/Screenshot_2.png)
+
+## Прочее
+В проекте также присутствует файл create_tar.py. Он только нужен для создания tar архива, основанного на какой-либо папке.
