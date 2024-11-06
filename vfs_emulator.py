@@ -22,7 +22,6 @@ class VFS:
             else:
                 target_path = os.path.join(self.current_path, path).replace('\\', '/')
 
-        # Проверка, существует ли целевая директория
         if not any(item.startswith(target_path + '/') for item in self.file_structure):
             raise FileNotFoundError(f"ls: no such file or directory: {path}")
 
