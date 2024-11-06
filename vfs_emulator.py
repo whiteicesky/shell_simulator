@@ -14,23 +14,18 @@ class VFS:
             return {member.name: member for member in tar.getmembers()}
 
     def ls(self, path=None):
-        # Если путь не передан, используем текущую директорию
         if path is None:
             target_path = self.current_path
         else:
-            # Определяем целевой путь (абсолютный или относительный)
             if path.startswith('/'):
-                # Абсолютный путь
                 target_path = 'vfs' + path
             else:
-                # Относительный путь
                 target_path = os.path.join(self.current_path, path).replace('\\', '/')
 
         # Проверка, существует ли целевая директория
         if not any(item.startswith(target_path + '/') for item in self.file_structure):
             raise FileNotFoundError(f"ls: no such file or directory: {path}")
 
-        # Возвращаем список файлов и папок в целевой директории
         return [os.path.basename(name) for name in self.file_structure
                 if name.startswith(target_path + '/') and
                 name[len(target_path) + 1:].count('/') == 0]
